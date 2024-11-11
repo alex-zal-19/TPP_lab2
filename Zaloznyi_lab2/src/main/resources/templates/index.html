@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1 style=>Calculator</h1>
+        <form action="/calculate" method="post">
+            <input type="text" name="expression" placeholder="Enter expression" required>
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div>
+            <h2>Result:</h2>
+            <p th:text="${result}"></p>
+            <p th:text="${error}" style="color:red;"></p>
+        </div>
+    </div>
+
+
+</body>
+</html>
